@@ -2054,11 +2054,7 @@
     </noscript>
     <!-- /Yandex.Metrika counter -->
 
-    <script>
-        document.addEventListener('wpcf7mailsent', function (event) {
-            window.location.href = "/zayavka-s-formy/";
-        }, false);
-    </script>
+
 
 
     <!-- Yandex.Metrika counter -->
@@ -2081,15 +2077,16 @@
 
 
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var base = window.location.origin;
-        var inputs = document.querySelectorAll('input[name="redirect"]');
-        for (var i = 0; i < inputs.length; i++) {
-            inputs[i].value = base + '/thank-you.html';
-        }
-    });
-</script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var base = window.location.origin;
+            var inputs = document.querySelectorAll('input[name="redirect"]');
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].value = base + '/thank-you.html';
+                inputs[i].setAttribute('value', base + '/thank-you.html');
+            }
+        });
+    </script>
 
 </body>
 
