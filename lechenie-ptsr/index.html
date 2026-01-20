@@ -381,7 +381,7 @@
 <div class="wpcf7 no-js" id="wpcf7-f290-o1" lang="ru-RU" dir="ltr">
 <form action="https://api.web3forms.com/submit" method="POST" class="wpcf7-form init">
 <input type="hidden" name="access_key" value="78c1b7d4-b1b3-4c53-831c-0f1649313701">
-<input type="hidden" name="redirect" value="https://uae.igordar.com/thank-you.html">
+<input type="hidden" name="redirect" value="">
 <input type="hidden" name="subject" value="Заявка с внутренней страницы (с сообщением)">
 <span class="wpcf7-form-control-wrap" data-name="text-369"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Ваше имя" value="" type="text" name="name" /></span>
 <span class="wpcf7-form-control-wrap" data-name="tel-556"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel phone-mask" aria-required="true" aria-invalid="false" placeholder="+7" value="" type="tel" name="phone" required /></span>
@@ -488,7 +488,7 @@
 <div class="wpcf7 no-js" id="wpcf7-f11-o2" lang="ru-RU" dir="ltr">
 <form action="https://api.web3forms.com/submit" method="POST" class="wpcf7-form init">
 <input type="hidden" name="access_key" value="78c1b7d4-b1b3-4c53-831c-0f1649313701">
-<input type="hidden" name="redirect" value="https://uae.igordar.com/thank-you.html">
+<input type="hidden" name="redirect" value="">
 <input type="hidden" name="subject" value="Заявка с внутренней страницы">
 <span class="wpcf7-form-control-wrap" data-name="text-173"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Имя" value="" type="text" name="name" required /></span>
 <span class="wpcf7-form-control-wrap" data-name="text-904"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone-mask" aria-required="true" aria-invalid="false" placeholder="+7" value="" type="text" name="phone" required /></span>
@@ -518,7 +518,7 @@
 <div class="wpcf7 no-js" id="wpcf7-f675-o3" lang="ru-RU" dir="ltr">
 <form action="https://api.web3forms.com/submit" method="POST" class="wpcf7-form init">
 <input type="hidden" name="access_key" value="78c1b7d4-b1b3-4c53-831c-0f1649313701">
-<input type="hidden" name="redirect" value="https://uae.igordar.com/thank-you.html">
+<input type="hidden" name="redirect" value="">
 <input type="hidden" name="subject" value="Заявка с внутренней страницы">
 <span class="wpcf7-form-control-wrap" data-name="text-173"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Имя" value="" type="text" name="name" required /></span>
 <span class="wpcf7-form-control-wrap" data-name="text-904"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone-mask" aria-required="true" aria-invalid="false" placeholder="+7" value="" type="text" name="phone" required /></span>
@@ -548,7 +548,7 @@
 <div class="wpcf7 no-js" id="wpcf7-f676-o4" lang="ru-RU" dir="ltr">
 <form action="https://api.web3forms.com/submit" method="POST" class="wpcf7-form init">
 <input type="hidden" name="access_key" value="78c1b7d4-b1b3-4c53-831c-0f1649313701">
-<input type="hidden" name="redirect" value="https://uae.igordar.com/thank-you.html">
+<input type="hidden" name="redirect" value="">
 <input type="hidden" name="subject" value="Заявка с внутренней страницы">
 <span class="wpcf7-form-control-wrap" data-name="text-173"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Имя" value="" type="text" name="name" required /></span>
 <span class="wpcf7-form-control-wrap" data-name="text-904"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone-mask" aria-required="true" aria-invalid="false" placeholder="+7" value="" type="text" name="phone" required /></span>
@@ -661,6 +661,17 @@ var wps_ajax = {"url":"https://uae.igordar.com/wp-admin/admin-ajax.php","nonce":
 
 
 
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var base = window.location.origin;
+        var inputs = document.querySelectorAll('input[name="redirect"]');
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].value = base + '/thank-you.html';
+        }
+    });
+</script>
 
 </body>
 </html>
